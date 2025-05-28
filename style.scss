@@ -71,38 +71,35 @@ a {
         }
     }
 
-    &__scroll{ 
-        box-sizing: border-box;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(50px);
-        background: rgb(188, 236, 48);
-        max-height: 90px;
-        overflow: hidden; 
-
-        
-        
-        &_text{
-            color: rgb(32, 32, 39);
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 110%;
-            letter-spacing: 4%;
-            text-align: left;
-            text-transform: uppercase;
-        }
-
-        &_content{
-            width: 3220px;
-            height: 36px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 51px;
-            overflow: hidden;
-            padding: 27px 49px;
-        }
+}
+.header-scroll{ 
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    background: rgb(188, 236, 48);
+    max-height: 90px;
+    overflow: hidden; 
+  
+    &__text{
+        color: rgb(32, 32, 39);
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 4%;
+        text-align: left;
+        text-transform: uppercase;
     }
 
+    &__content{
+        width: 3220px;
+        height: 36px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 51px;
+        overflow: hidden;
+        padding: 27px 49px;
+    }
 }
 .game-info{
     height: 1470px;

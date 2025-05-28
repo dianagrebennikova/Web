@@ -64,7 +64,8 @@ body {
   background: rgb(255, 255, 255);
   color: rgb(32, 32, 39);
 }
-.header-top__scroll {
+
+.header-scroll {
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(50px);
@@ -73,7 +74,7 @@ body {
   max-height: 90px;
   overflow: hidden;
 }
-.header-top__scroll_text {
+.header-scroll__text {
   color: rgb(32, 32, 39);
   font-size: 30px;
   font-weight: 700;
@@ -82,7 +83,7 @@ body {
   text-align: left;
   text-transform: uppercase;
 }
-.header-top__scroll_content {
+.header-scroll__content {
   width: 3220px;
   height: 36px;
   display: flex;
