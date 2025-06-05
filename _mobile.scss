@@ -1,0 +1,75 @@
+@media (max-width: 767px){
+    .header-top{
+        height: 650px;
+        background-image: url(./image/starBigMobile.svg), url(./image/Star1mobile.svg), url(./image/Star2\ mobile.svg), url(./image/Star3\ mobile.svg), url(./image/Star\ 4\ mobile.svg);
+        background-color: rgb(225, 255, 143);
+        background-repeat: no-repeat,no-repeat, no-repeat, no-repeat,no-repeat;
+        position: relative;
+        background-position: 215px -95px, 37px 97px, 91px 64px, 300px 555px, 275px 530px;
+    
+        &__title{
+            padding-top: 147px;
+            font-size: 40px;
+            line-height: 49px;
+            text-align: center;
+        }
+
+        &__description {
+
+            font-size: 16px;
+            line-height: 20px;
+            text-align: center;
+            padding-bottom: 36px;
+        }
+        &__button{
+            width: 285px;
+            height: 55px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-left: 46px;
+   
+    
+            &:hover{
+                border: 1px solid rgb(32, 32, 39);
+                background: rgb(32, 32, 39);
+                color: rgb(255, 255, 255);
+            } 
+        }       
+        
+    }
+
+    .header-scroll{ 
+        max-height: 50px;
+
+        &__text{
+            font-size: 16px;
+        }
+
+        &__content{
+            width: 1670px;
+            height: 20px;
+            gap: 27.4px;
+            padding: 15px 24px;
+        }
+
+        &__image{
+            width: 19.34px;
+            height: 19.34px;    
+        }
+    }
+    .game-info {
+        display: none;
+    }
+
+    .footer{
+        height: 100px;
+    
+        &__info{
+            font-size: 16px;
+            line-height: 20px;
+        }
+    
+    
+    
+    }
+}

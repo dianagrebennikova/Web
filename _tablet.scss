@@ -1,0 +1,45 @@
+@media (max-width: 1024px) {
+    .center{
+        padding-left: calc(50% - 786px/2);
+        padding-right: calc(50% - 786px/2);
+    }
+    
+    .header-top{
+        background-position: 220px -480px, 64px 94px, 156px 69px, 650px 568px, 500px 538px;
+    
+    }
+
+    .game-info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+        &__title, &__description{
+            grid-column: span 2;
+        }
+        &__item{
+            grid-column: span 1;
+        }
+    }
+
+
+    .game-info__list1, .game-info__list2  {
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    .game-info__item {
+        max-width: 345px;
+    }
+    
+    .game-info__image{
+        width: 345px;
+    }
+}
+@media (min-width: 768px) and (max-width: 833px) {
+
+    .center{
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+}

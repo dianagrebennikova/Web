@@ -102,7 +102,7 @@ a {
     }
 }
 .game-info{
-    height: 1470px;
+    padding-bottom: 96px;
     background-image: url(./image/main\ Star.svg), url(./image/mainStar1.svg), url(./image/mainStar2.svg);
     background-color: rgb(32, 32, 39);
     background-repeat: no-repeat,no-repeat, no-repeat;
@@ -185,3 +185,22 @@ a {
         padding-top: 16px;
     }
 }
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    background: rgb(189, 237, 53);
+
+    &__info{
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        letter-spacing: 0px;
+    }
+
+}
+@import 'tablet';
+@import 'mobile';
