@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -94,13 +95,14 @@ body {
   padding: 27px 49px;
 }
 
-.game-info {
-  padding-bottom: 96px;
-  background-image: url(./image/main\ Star.svg), url(./image/mainStar1.svg), url(./image/mainStar2.svg);
+.game {
+  padding-bottom: 112px;
+  background-image: url(./image/main\ Star.svg), url(./image/mainStar1.svg), url(./image/mainStar2.svg), url(./image/mainStar3.svg), url(./image/mainStar4.svg), url(./image/mainStar5.svg), url(./image/mainStar6.svg);
   background-color: rgb(32, 32, 39);
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-position: 945px 55px, 37px 748px, 52px 800px;
+  background-position: 945px 55px, 37px 748px, 52px 800px, 1320px 1585px, 1277px 1550px, 1249px 4880px, 1319px 4825px;
 }
+
 .game-info__title {
   color: rgb(255, 255, 255);
   font-size: 64px;
@@ -169,6 +171,67 @@ body {
   letter-spacing: 0px;
   text-align: left;
   padding-top: 16px;
+}
+
+.games__title {
+  color: rgb(255, 255, 255);
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
+.games__item {
+  background: #FFFFFF;
+  display: flex;
+  border-radius: 30px;
+  margin-bottom: 32px;
+}
+.games__info {
+  display: flex;
+  flex-direction: column;
+  padding: 48px;
+  width: 504px;
+}
+.games__name {
+  color: rgb(32, 32, 39);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+.games__description {
+  color: rgb(32, 32, 39);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  letter-spacing: 0px;
+  text-align: left;
+  padding-top: 24px;
+  padding-bottom: 36px;
+}
+.games__button {
+  border-radius: 60px;
+  background: rgb(32, 32, 39);
+  padding: 16px 28px;
+  color: rgb(255, 255, 255);
+  font-family: Montserrat;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 141.69%;
+  letter-spacing: 0%;
+  text-align: center;
+  width: 247px;
+  height: 66px;
+}
+.games__button:hover {
+  border: 1px solid rgb(32, 32, 39);
+  background: rgb(255, 255, 255);
+  color: rgb(32, 32, 39);
+  box-sizing: border-box;
 }
 
 .footer {
