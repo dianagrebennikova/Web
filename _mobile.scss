@@ -1,4 +1,9 @@
 @media (max-width: 767px){
+    .center{
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
     .header-top{
         height: 650px;
         background-image: url(./image/starBigMobile.svg), url(./image/Star1mobile.svg), url(./image/Star2\ mobile.svg), url(./image/Star3\ mobile.svg), url(./image/Star\ 4\ mobile.svg);
@@ -6,6 +11,13 @@
         background-repeat: no-repeat,no-repeat, no-repeat, no-repeat,no-repeat;
         position: relative;
         background-position: 215px -95px, 37px 97px, 91px 64px, 300px 555px, 275px 530px;
+
+        &__section{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     
         &__title{
             padding-top: 147px;
@@ -26,7 +38,6 @@
             height: 55px;
             font-size: 16px;
             box-sizing: border-box;
-            margin-left: 46px;
    
     
             &:hover{
@@ -59,6 +70,49 @@
     }
     .game-info {
         display: none;
+    }
+    
+    .game{
+        padding-bottom: 10px;
+    }
+
+    .games{
+        gap: 24px;
+
+        &__title{
+            font-size: 40px;
+            line-height: 49px;
+            padding-top: 48px;
+            padding-bottom: 24px;
+        }
+
+        &__item{
+            flex-direction: column;
+    
+        }
+
+        &__info{
+            order: 1;
+            padding: 29px 29px 32px 29px;
+        }
+
+        &__name{
+            font-size: 32px;
+            line-height: 39px;
+        }
+
+        &__description{
+            font-size: 16px;
+            line-height: 20px;
+            padding-top: 16px;
+            padding-bottom: 32px;
+        }
+
+        &__button{
+            width: 285px;
+            height: 55px;
+            font-size: 16px;
+        }
     }
 
     .footer{
