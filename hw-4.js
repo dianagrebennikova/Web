@@ -107,41 +107,25 @@ alert(Number(q) + Number(w));
 let monthNumber = 13;
 
 switch (monthNumber) {
-   case 1:
-        console.log('Зима');
-        break;
+    case 1:
     case 2:
+    case 12:
         console.log('Зима');
         break;
-    case 3:
-        console.log('Весна');
-        break;   
-    case 4:
-        console.log('Весна');
-        break;   
+    case 3:   
+    case 4:  
     case 5:
         console.log('Весна');
         break;   
-    case 6:
-        console.log('Лето');
-        break;   
+    case 6:  
     case 7:
-        console.log('Лето');
-        break;   
     case 8:
         console.log('Лето');
-        break;   
+        break; 
     case 9:
-        console.log('Осень');
-        break;   
     case 10:
-        console.log('Осень');
-        break;   
     case 11:
         console.log('Осень');
-        break;
-    case 12:
-        console.log('Зима');
         break;
    default:
       console.log('ввели что-то не то');
@@ -188,3 +172,110 @@ if (clientOS === 1) {
 } else {
     console.log('Неизвестная ОС');
 }
+
+//hw-4
+
+//task - 1
+let hello = 0;
+while (hello < 2) {
+    console.log(`Привет!`);
+    hello++;
+}
+
+//task - 2
+let Num = 1;
+while (Num <= 5){
+    console.log(Num);
+    Num++;
+}
+
+//task - 3
+
+for (let l = 7; l <= 22; l++) {
+   console.log(l);   
+}
+
+//task - 4
+const obj = {
+"Коля" : '200',
+"Вася" : '300',
+"Петя" : '400'
+}
+for (let key in obj) {
+    console.log(`${key}: Зарплата ${obj[key]} долларов`);
+}
+
+//task - 5
+ let n = 1000;
+ let num2 = 0;
+ while (n >= 50) {
+    n /= 2;
+    num2++;
+ }
+ console.log(n);
+ console.log(num2);
+
+ //task - 6
+ let dayWeek = 4;
+ let dayMonth = 31;
+ for (let friday = dayWeek;  friday <= dayMonth ; friday+= 7) {
+    console.log(`Сегодня пятница, ${friday} -е число. Необходимо подготовить отчет.`);    
+ }
+
+ //Additional task
+
+ //task - 1 
+
+ let k = 100;
+ let iterations = 0;
+ while (k >= 0) {
+    k -= 7;
+    iterations++;
+ }
+ console.log(k);
+ console.log(iterations);
+
+ //task - 2 в задании массив, но мы еще не прошли их по плану они от 30/06/25
+
+ const months = {
+    "Январь" : 1,
+    "Февраль" : 2,
+    "Март" : 3,
+    "Апрель" : 4,
+    "Май" : 5,
+    "Июнь" : 6,
+    "Июль" : 7,
+    "Август" : 8,
+    "Сентябрь" : 9,
+    "Октябрь" : 10,
+    "Ноябрь" : 11,
+    "Декабрь" : 12,
+ }
+ for (let key in months) {
+    console.log(`${key}: ${months[key]} -й месяц`);
+}
+
+
+//task - 3
+const book  = {
+    "Название" : "The Wheel of Time",
+    "Автор" : "Роберт Джордан",
+    "Год издания" : 1990,
+    "Жанр" : "fantasy",
+ }
+ for (let key in book) {
+    console.log(`${key}: ${book[key]}`);
+}
+
+//task - 4 в задании массив, но мы еще не прошли их по плану они от 30/06/25
+
+let numberMin = Math.floor(Math.random() * 101);
+console.log(`Первое число: ${numberMin}`);
+for (let s = 0; s < 9; s++) {
+    const currentNumber = Math.floor(Math.random() * 101);
+    console.log("Следующее число:", currentNumber);
+    if (currentNumber < numberMin) {
+        numberMin = currentNumber;
+    }    
+}
+console.log("Минимальное число из 10 случайных:", numberMin);

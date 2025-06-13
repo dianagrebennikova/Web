@@ -192,6 +192,9 @@ a {
 }
 
 .games{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 
     &__title{
         color: rgb(255, 255, 255);
@@ -208,14 +211,18 @@ a {
         background: #FFFFFF;
         display: flex;
         border-radius: 30px;
-        margin-bottom: 32px;
+
+
+        &_left{
+            justify-content: space-between;
+        }
     }
 
     &__info{
         display: flex;
         flex-direction: column;
         padding: 48px;
-        width: 504px;
+
 
     }
 

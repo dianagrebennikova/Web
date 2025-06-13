@@ -173,6 +173,11 @@ body {
   padding-top: 16px;
 }
 
+.games {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
 .games__title {
   color: rgb(255, 255, 255);
   font-size: 64px;
@@ -187,13 +192,14 @@ body {
   background: #FFFFFF;
   display: flex;
   border-radius: 30px;
-  margin-bottom: 32px;
+}
+.games__item_left {
+  justify-content: space-between;
 }
 .games__info {
   display: flex;
   flex-direction: column;
   padding: 48px;
-  width: 504px;
 }
 .games__name {
   color: rgb(32, 32, 39);
@@ -277,6 +283,22 @@ body {
   .game-info__image {
     width: 345px;
   }
+  .games__info {
+    padding: 30px;
+  }
+  .games__name {
+    font-size: 35px;
+    line-height: 35px;
+  }
+  .games__description {
+    font-size: 20px;
+    line-height: 23px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+  .games__image {
+    max-height: 375px;
+  }
 }
 @media (min-width: 768px) and (max-width: 833px) {
   .center {
@@ -285,6 +307,10 @@ body {
   }
 }
 @media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
   .header-top {
     height: 650px;
     background-image: url(./image/starBigMobile.svg), url(./image/Star1mobile.svg), url(./image/Star2\ mobile.svg), url(./image/Star3\ mobile.svg), url(./image/Star\ 4\ mobile.svg);
@@ -292,6 +318,12 @@ body {
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
     position: relative;
     background-position: 215px -95px, 37px 97px, 91px 64px, 300px 555px, 275px 530px;
+  }
+  .header-top__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .header-top__title {
     padding-top: 147px;
@@ -310,7 +342,6 @@ body {
     height: 55px;
     font-size: 16px;
     box-sizing: border-box;
-    margin-left: 46px;
   }
   .header-top__button:hover {
     border: 1px solid rgb(32, 32, 39);
@@ -335,6 +366,40 @@ body {
   }
   .game-info {
     display: none;
+  }
+  .game {
+    padding-bottom: 10px;
+  }
+  .games {
+    gap: 24px;
+  }
+  .games__title {
+    font-size: 40px;
+    line-height: 49px;
+    padding-top: 48px;
+    padding-bottom: 24px;
+  }
+  .games__item {
+    flex-direction: column;
+  }
+  .games__info {
+    order: 1;
+    padding: 29px 29px 32px 29px;
+  }
+  .games__name {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .games__description {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+  }
+  .games__button {
+    width: 285px;
+    height: 55px;
+    font-size: 16px;
   }
   .footer {
     height: 100px;

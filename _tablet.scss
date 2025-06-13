@@ -34,6 +34,28 @@
     .game-info__image{
         width: 345px;
     }
+
+    .games{
+
+        &__info{
+            padding: 30px;
+        }
+
+        &__name{
+            font-size: 35px;
+            line-height: 35px;
+        }
+        &__description{
+            font-size: 20px;
+            line-height: 23px;
+            padding-top: 16px;
+            padding-bottom: 32px;
+        }
+
+        &__image{ 
+             max-height: 375px; 
+        }
+    }
 }
 @media (min-width: 768px) and (max-width: 833px) {
 

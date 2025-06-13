@@ -13,20 +13,22 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <script src="hw-3.js"></script>
+    <script src="hw-4.js"></script>
     <header>
       <div class="header-top center">
-        <h1 class="header-top__title">
-          Добро пожаловать <br />
-          на мой сайт мини-игр
-        </h1>
-        <p class="header-top__description">
-          Тебе предстоит пройти несколько увлекательных игр.<br />
-          Если готов, нажимай <b>«Поехали!»</b> и <b>приступай</b>
-        </p>
-        <a href="#next-block">
-          <button class="header-top__button" id="next-block">Поехали!</button>
-        </a>
+        <div class="header-top__section">
+          <h1 class="header-top__title">
+            Добро пожаловать <br />
+            на мой сайт мини-игр
+          </h1>
+          <p class="header-top__description">
+            Тебе предстоит пройти несколько увлекательных игр.<br />
+            Если готов, нажимай <b>«Поехали!»</b> и <b>приступай</b>
+          </p>
+          <a href="#next-block">
+            <button class="header-top__button" id="next-block">Поехали!</button>
+          </a>
+        </div>
       </div>
       <div class="header-scroll">
         <div class="header-scroll__content">
@@ -137,7 +139,7 @@
       </section>
       <section class="games">
         <h2 class="games__title">Мини-игры</h2>
-        <article class="games__item" id="gameOne">
+        <article class="games__item games__item_left" id="gameOne">
           <div class="games__info">
             <h3 class="games__name">Угадай число</h3>
             <p class="games__description">
@@ -146,10 +148,10 @@
             </p>
             <button class="games__button">Играть!</button>
           </div>
-          <img src="./image/games-1.svg" alt="game" />
+          <img class="games__image" src="./image/games-1.svg" alt="game" />
         </article>
         <article class="games__item" id="gameTwo">
-          <img src="./image/games-2.svg" alt="game" />
+          <img class="games__image" src="./image/games-2.svg" alt="game" />
           <div class="games__info">
             <h3 class="games__name">Простая арифметика</h3>
             <p class="games__description">
@@ -159,7 +161,7 @@
             <button class="games__button">Играть!</button>
           </div>
         </article>
-        <article class="games__item" id="gameThree">
+        <article class="games__item games__item_left" id="gameThree">
           <div class="games__info">
             <h3 class="games__name">Переверни текст</h3>
             <p class="games__description">
@@ -168,10 +170,10 @@
             </p>
             <button class="games__button">Играть!</button>
           </div>
-          <img src="./image/games-3.svg" alt="game" />
+          <img class="games__image" src="./image/games-3.svg" alt="game" />
         </article>
         <article class="games__item" id="gameFour">
-          <img src="./image/games-4.svg" alt="game" />
+          <img class="games__image" src="./image/games-4.svg" alt="game" />
           <div class="games__info">
             <h3 class="games__name">
               Камень, <br />
@@ -185,19 +187,22 @@
             <button class="games__button">Играть!</button>
           </div>
         </article>
-        <article class="games__item" id="gameFive">
+        <article class="games__item games__item_left" id="gameFive">
           <div class="games__info">
-            <h3 class="games__name">Простая викторина</h3>
+            <h3 class="games__name">
+              Простая <br />
+              викторина
+            </h3>
             <p class="games__description">
               Отвечай на вопросы викторины <br />
               c вариантами ответов.
             </p>
             <button class="games__button">Играть!</button>
           </div>
-          <img src="./image/games-5.svg" alt="game" />
+          <img class="games__image" src="./image/games-5.svg" alt="game" />
         </article>
         <article class="games__item" id="gameSix">
-          <img src="./image/games-6.svg" alt="game" />
+          <img class="games__image" src="./image/games-6.svg" alt="game" />
           <div class="games__info">
             <h3 class="games__name">
               Генератор <br />
