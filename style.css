@@ -66,14 +66,24 @@ body {
   color: rgb(32, 32, 39);
 }
 
+@keyframes header-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
 .header-scroll {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
   box-sizing: border-box;
   border: 1px solid rgba(255, 255, 255, 0.2);
   -webkit-backdrop-filter: blur(50px);
           backdrop-filter: blur(50px);
   background: rgb(188, 236, 48);
   max-height: 90px;
-  overflow: hidden;
 }
 .header-scroll__text {
   color: rgb(32, 32, 39);
@@ -85,7 +95,8 @@ body {
   text-transform: uppercase;
 }
 .header-scroll__content {
-  width: 3220px;
+  animation: header-scroll 20s linear infinite;
+  width: 3400px;
   height: 36px;
   display: flex;
   flex-direction: row;
@@ -263,6 +274,9 @@ body {
   .header-top {
     background-position: 220px -480px, 64px 94px, 156px 69px, 650px 568px, 500px 538px;
   }
+  .header-scroll__content {
+    width: 4500px;
+  }
   .game-info {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -355,7 +369,7 @@ body {
     font-size: 16px;
   }
   .header-scroll__content {
-    width: 1670px;
+    width: 2500px;
     height: 20px;
     gap: 27.4px;
     padding: 15px 24px;

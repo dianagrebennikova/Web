@@ -1,4 +1,4 @@
-//task1
+/* //task1
 let a = 10;
 alert (a);
 a = 20;
@@ -98,10 +98,10 @@ console.log(d > 100 || e > 100 ? `Верно`:`Неверно`);
 
 //task-4
 
-let q = '2';
-let w = '3';
-// Код выше изменять менять нельзя. Чтобы решить задачу исправьте код ниже:
-alert(Number(q) + Number(w));
+let Q = '2';
+let W = '3';
+
+alert(Number(Q) + Number(W));
 
 //task-5
 let monthNumber = 13;
@@ -278,4 +278,134 @@ for (let s = 0; s < 9; s++) {
         numberMin = currentNumber;
     }    
 }
-console.log("Минимальное число из 10 случайных:", numberMin);
+console.log("Минимальное число из 10 случайных:", numberMin);  */
+
+//hw - 5
+//task-1
+
+function minimumNumber (){
+    let a = 8;
+    let b = 5;
+    return (a <= b) ? a : b;
+}
+
+console.log(minimumNumber());
+
+//task-2
+
+function evenOrOdd (n){
+    if  (n % 2 === 0){
+        return (`Число четное`)
+    } else {
+        return (`Число нечетное`)
+    }
+}
+console.log(evenOrOdd(9));
+
+//task-3 
+
+function squareNum (w){
+const square = w ** 2;
+console.log(square);
+}
+squareNum(8); 
+
+function getSquare(w) {
+    return w ** 2;
+  } 
+
+  const result1 = getSquare(7);
+    console.log(result1);
+
+    //task-4
+function friendAge (){
+    let age = Number (prompt(`Сколько тебе лет?`));
+    if (age >= 0 && age <= 12) {
+        console.log('Привет, друг!');
+    } else if (age >= 13) {
+        console.log('Добро пожаловать!');
+    } else if( age < 0){
+        console.log('Вы ввели неправильное значение');
+    } else {
+        console.log('Вы ввели неправильное значение');
+    }   
+}
+friendAge();
+
+// task-5
+
+function numTwo (a, b) {
+    if (isNaN(a) || isNaN(b)) {
+        return 'Одно или оба значения не являются числом';
+    } else {
+        return a * b;  
+    } 
+}
+console.log(numTwo(`sdf`,3));
+console.log(numTwo(10,3));
+
+// task-6
+
+function numThree() {
+    let d = Number (prompt(`Введи число`));
+    if (isNaN(d)) {
+        return `Переданный параметр не является числом`; 
+    } else { 
+        let result = d ** 3;
+        return d + ' в кубе равняется ' + result;
+    } 
+}
+console.log(numThree());
+
+//task-7
+
+const circle1 = {
+    radius: 1,
+    getArea: function () {
+        return Math.PI * this.radius * this.radius;
+    },
+    getPerimeter: function () {
+        return 2 * Math.PI * this.radius;
+    }
+}
+ const circle2 = {
+    radius: 2,
+    getArea: function () {
+        return Math.PI * this.radius * this.radius;
+    },
+    getPerimeter: function () {
+        return 2 * Math.PI * this.radius;
+    }
+}
+
+console.log(circle1.getArea());
+console.log(circle1.getPerimeter());
+
+console.log(circle2.getArea());
+console.log(circle2.getPerimeter());
+
+
+function game1() {
+let randomNumber = Math.floor(Math.random() * 101);
+let isRight = false;
+    while (!isRight) {
+        const userNumber = Number (prompt ('Угадай число от 1 до 100'));
+        if (randomNumber > userNumber) {
+            let guess = confirm (`Не угадал, загаданное число больше`)
+            if (!guess) {
+                break;
+            }
+        } else if (randomNumber < userNumber){
+            let guess = confirm (`Не угадал, загаданное число меньше`)
+            if (!guess) {
+                break;
+            }
+        } else {
+            alert(`Угадал`)
+            break;
+        }
+    }
+}
+
+
+

@@ -9,6 +9,10 @@
     
     }
 
+    .header-scroll__content {
+        width: 4500px;
+    }
+
     .game-info{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -20,7 +24,6 @@
             grid-column: span 1;
         }
     }
-
 
     .game-info__list1, .game-info__list2  {
         gap: 24px;
