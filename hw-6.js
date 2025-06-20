@@ -1,3 +1,79 @@
+//game - 1 
+function game1() {
+    let randomNumber = Math.floor(Math.random() * 101);
+    let isRight = false;
+        while (!isRight) {
+            const userNumber = Number (prompt ('Угадай число от 1 до 100'));
+            if (randomNumber > userNumber) {
+                let guess = confirm (`Не угадал, загаданное число больше`)
+                if (!guess) {
+                    break;
+                }
+            } else if (randomNumber < userNumber){
+                let guess = confirm (`Не угадал, загаданное число меньше`)
+                if (!guess) {
+                    break;
+                }
+            } else {
+                alert(`Угадал`)
+                break;
+            }
+        }
+    }
+
+//game - 2    
+
+function game2(){
+    let isContinue = true;
+    while (isContinue) {
+        let randomNumberOne = Math.floor(Math.random() * 101);
+        let randomNumberTwo = Math.floor(Math.random() * 11);
+        let operationID = Math.floor(Math.random() * 4) + 1;
+        let rightResult;
+        let userResult;
+        
+        switch(operationID){
+            case(1):{
+                userResult = prompt(randomNumberOne + " + " + randomNumberTwo + " = ");    
+                rightResult = randomNumberOne + randomNumberTwo;
+                break;
+            }
+            case(2):{
+                userResult = prompt(randomNumberOne + " - " + randomNumberTwo + " = ");
+                rightResult = randomNumberOne - randomNumberTwo;
+                break;
+            }
+            case(3):{
+                userResult = prompt(randomNumberOne + " * " + randomNumberTwo + " = ");
+                rightResult = randomNumberOne * randomNumberTwo;
+                break;
+            }
+            case(4):{
+                userResult = prompt(randomNumberOne + " / " + randomNumberTwo + " = ");
+                rightResult = randomNumberOne / randomNumberTwo;
+                rightResult = (randomNumberOne / randomNumberTwo).toFixed(2);
+                break;
+            }
+            default:
+                return;
+        }
+
+        if (userResult === null){
+            break;
+        }
+        
+        const userAnswerNum = parseFloat(userResult);
+
+        if (rightResult == userAnswerNum){
+            isContinue = confirm (`Правильно`)
+
+        }
+        else{
+            isContinue = confirm ("Неверно, правильный ответ: " + rightResult)
+        }
+    }
+}
+
 /* //task1
 let a = 10;
 alert (a);
@@ -278,7 +354,7 @@ for (let s = 0; s < 9; s++) {
         numberMin = currentNumber;
     }    
 }
-console.log("Минимальное число из 10 случайных:", numberMin);  */
+console.log("Минимальное число из 10 случайных:", numberMin); 
 
 //hw - 5
 //task-1
@@ -383,29 +459,144 @@ console.log(circle1.getPerimeter());
 
 console.log(circle2.getArea());
 console.log(circle2.getPerimeter());
+ */
 
+//hw - 6
+//task - 1
 
-function game1() {
-let randomNumber = Math.floor(Math.random() * 101);
-let isRight = false;
-    while (!isRight) {
-        const userNumber = Number (prompt ('Угадай число от 1 до 100'));
-        if (randomNumber > userNumber) {
-            let guess = confirm (`Не угадал, загаданное число больше`)
-            if (!guess) {
-                break;
-            }
-        } else if (randomNumber < userNumber){
-            let guess = confirm (`Не угадал, загаданное число меньше`)
-            if (!guess) {
-                break;
-            }
-        } else {
-            alert(`Угадал`)
-            break;
-        }
-    }
+ const numbers = [1, 5, 4, 10, 0, 3];
+ for (let i = 0; i < numbers.length; i++){
+    console.log(numbers[i]);
+    if (numbers[i] === 10) break;
+ }
+
+ //task - 2
+
+ const num3 = [1, 5, 4, 10, 0, 3];
+ const index = num3.indexOf(4);
+ console.log(index);
+
+ //task - 3
+
+  const space = [1, 3, 5, 10, 20];
+  let joinSpace = space.join (" ");
+  console.log(joinSpace);
+
+  //task - 4 
+  const size = 3; 
+  const multiArray = [];
+  
+  for (let i = 0; i < size; i++) {
+      const row = [];
+      for (let j = 0; j < size; j++) {
+          row.push(1);
+      }
+      multiArray.push(row); 
+  }
+  
+  console.log(multiArray);
+
+  //task - 5
+
+const array =  [1, 1, 1];
+array.push (2, 2, 2.);
+console.log(array);
+
+//task - 6
+
+ const array1 = [9, 8, 7, 'a', 6, 5];
+ array1.sort()
+ array1.pop()
+ console.log(array1);
+
+ //task - 7
+
+ const guessNum = [9, 8, 7, 6, 5];
+ let thinkNum = Number(prompt (`Угадай число`));
+ if (guessNum.includes(thinkNum)) {
+    alert (`Угадал`)
+ } else{
+    alert (`Не угадал`)
+ }
+
+ //task - 8
+
+let string = 'abcdef';
+let splitString = string.split("");
+let reverseString = splitString.reverse();
+console.log(reverseString.join(""));
+
+//task - 9
+
+const union = [
+    [1, 2, 3],
+    [4, 5, 6]
+];
+const combinedArray = [...union[0], ...union[1]];
+console.log(combinedArray);
+
+//task - 10 
+
+const Array = [ 3,4,2,6,5,7,9];
+    for (let i = 0; i < Array.length - 1; i++) {
+        const sum = Array[i] + Array[i + 1];
+        console.log(sum);
+    } 
+
+//task - 11
+
+function Square () {
+    const input = prompt (`Введите числа через запятую`)
+    const arr = input.split(',').map(Number);
+    const getSquares = (arr) => arr.map(num => num * num);
+    const result = getSquares(arr);
+    console.log(result);
 }
+ console.log(Square());
+
+ //task - 12
+
+function arrayString () {
+    const lines =  prompt (`Введите слова через запятую`);
+    const arrLines = lines.split (`,`).map(word=> word.trim());
+    const getLengths = (arr) => arr.map(word => word.length);
+    const lengths = getLengths(arrLines);
+    console.log(lengths);
+}
+console.log(arrayString());
+
+//task - 13
+
+function negativeNum () {
+    const input = prompt (`Введите числа через запятую`)
+    const arr = input.split(',').map(Number);
+    const getNegativeNum = (arr) => arr.filter(num => num < 0);
+    const result = getNegativeNum(arr);
+    console.log(result);
+}
+ console.log(negativeNum());
+
+ //task - 14
+
+const numArr = [];
+for (let i = 0; i < 10; i++) {
+    numArr[i] = Math.floor(Math.random() * 11);
+}
+const getEvenNum = (arr) => arr.filter(num => num % 2 === 0);
+const evenArr = getEvenNum(numArr);
+console.log(numArr);
+console.log(evenArr);
 
 
+//task - 15
 
+const averageArr = [];
+for (let i = 0; i < 6; i++) {
+    averageArr[i] = Math.floor(Math.random() * 11);
+}
+const getAverageArr = (arr) => {
+    const sum = arr.reduce((acc,number)=> acc + number,0);
+    return sum / arr.length;
+};
+console.log(averageArr);
+console.log(getAverageArr(averageArr));
