@@ -74,6 +74,69 @@ function game2(){
     }
 }
 
+
+//game - 3
+
+function game3() {
+    const userText = String(prompt ('Введите текст. Используйте только кириллические символы'));
+    if (userText === null){
+        alert ("Введ отменен");
+        return;
+    }
+
+    let regexp = /^[а-яА-Я\s]+$/;
+    if(regexp.test(userText)) {
+    const arrText = userText.split('');
+    arrText.reverse();
+    const reversedText =  arrText.join('');
+    alert (`Перевернутый текст: ${reversedText}`)
+    } else{
+        alert("Некорректный ввод. Используйте только кириллические символы.")
+    }
+}
+
+// game - 5
+
+function game5() {
+    const quiz = [
+        {
+            question: "Какой цвет небо?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+
+    let length = 0;
+    for (let i = 0; i < quiz.length; i++) {
+        const answerStr = prompt(`Выберите ответ: \n${quiz[i].question}\n${quiz[i].options}`);
+        
+        if (answerStr === null) {
+            break; 
+        }
+
+        const quizQuestions = Number(answerStr);
+        
+        if (quizQuestions === quiz[i].correctAnswer) {
+            length++;
+            alert('Ответ верный');
+        } else {
+            alert('Ответ неправильный');
+        }
+    }
+    alert(`Вы ответили правильно на ${length} вопросов`);
+}
+
+
 /* //task1
 let a = 10;
 alert (a);
@@ -464,7 +527,7 @@ console.log(circle2.getPerimeter());
 //hw - 6
 //task - 1
 
- const numbers = [1, 5, 4, 10, 0, 3];
+ /* const numbers = [1, 5, 4, 10, 0, 3];
  for (let i = 0; i < numbers.length; i++){
     console.log(numbers[i]);
     if (numbers[i] === 10) break;
@@ -599,4 +662,112 @@ const getAverageArr = (arr) => {
     return sum / arr.length;
 };
 console.log(averageArr);
-console.log(getAverageArr(averageArr));
+console.log(getAverageArr(averageArr)); */
+
+//hw - 7
+
+//task - 1
+
+ let str = 'js';
+ let STR = str.toUpperCase();
+ console.log(STR);
+
+ //task - 2
+
+const arrUp = [`Бабочка`, `Молоко`, `Бриллиант`, `Книга`, `Бассейн`];
+const arrDown = "б";
+
+function strArray(array, startStr) {
+    const lowerStartStr = startStr.toLowerCase();
+    return array.filter(item => item.toLowerCase().startsWith(lowerStartStr));
+}
+
+const filterArray = strArray(arrUp, arrDown);
+ console.log(filterArray);
+
+ //task - 3
+
+let fractionalNum = 32.58884;
+console.log(Math.floor (fractionalNum));
+console.log(Math.ceil (fractionalNum));
+console.log(Math.round (fractionalNum));
+
+//task - 4
+
+const Numbers = [52, 53, 49, 77, 21, 32];
+
+console.log(Math.min(...Numbers));
+console.log(Math.max(...Numbers));
+
+//task - 5
+
+function randomNum () {
+    let random = Math.floor(Math.random() * 10)
+    let result = Math.ceil(random);
+    console.log(result);
+}
+randomNum();
+
+//task - 6
+
+function Number2 (a) {
+    const length = Math.floor(a/2);
+    const result = [];
+    for (let i = 0; i < length; i++) {
+        const randomNumber = Math.floor(Math.random() * (a + 1));
+        result.push(randomNumber); 
+    }
+    return result
+}
+
+console.log(Number2(7));
+
+//task - 7
+
+function number (start, end) {
+     const min = Math.ceil(Math.min(start, end));
+     const max = Math.floor(Math.max(start, end));
+
+     return Math.floor(Math.random() * max - (min + 1)) + min;
+ 
+}
+console.log(number (5, 10));
+
+//task - 8
+
+let date = new Date();
+
+console.log(date.toLocaleDateString());
+
+//task - 9
+
+let currentDate = new Date();
+let days73 = 73 * 24 * 60 * 60 * 1000;
+let newDays = +currentDate + days73;
+let  in73Days = new Date(newDays); 
+
+console.log(in73Days);
+
+//task - 10 
+
+function dateArr (inputDate) {
+    const days = ["Воскресенье", "Понедельник", "Вторник", "Среда", "Четверг",
+        "Пятница", "Суббота"];
+    const months = ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь",
+        "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"];
+    let date = new Date(inputDate)
+    if (isNaN(date.getTime())) {
+        console.log("Некорректная дата");
+        return;
+    }
+    let fullDate = "Дата: " + date.getDate() + 
+        " " + months[date.getMonth()] + 
+        " " + date.getFullYear() + 
+        " - это " + days[date.getDay()];
+    let fullTime = "Время: " + date.getHours().toString().padStart(2, '0') + 
+        ":" + date.getMinutes().toString().padStart(2, '0') + 
+        ":" + date.getSeconds().toString().padStart(2, '0');
+
+    console.log(`${fullDate}\n${fullTime}`);
+}
+dateArr("2025/06/24 14:30:45");
