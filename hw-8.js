@@ -95,6 +95,53 @@ function game3() {
     }
 }
 
+// game - 4
+
+function game4() {
+    const options = ["камень", "ножницы", "бумага"];
+    let wins = 0;
+    let losses = 0;
+    let draws = 0;
+
+    while (true) {
+      const userInputRaw = prompt("Выберите: камень, ножницы или бумага");
+
+      if (userInputRaw === null) {
+        break;    
+      }
+  
+      const userInput = userInputRaw.toLowerCase();
+  
+      if (!options.includes(userInput)) {
+        alert("Некорректный выбор.");
+        continue; 
+      }
+  
+      const computerChoice = options[Math.floor(Math.random() * options.length)];
+  
+      let result;
+      if (userInput === computerChoice) {
+          result = "Ничья!";
+          draws++;
+      } else if (
+          (userInput === "камень" && computerChoice === "ножницы") || (userInput === "ножницы" && computerChoice === "бумага") || (userInput === "бумага" && computerChoice === "камень")) {
+          result = "Вы победили!";
+          wins++;
+      } else {
+          result = "Вы проиграли!";
+          losses++;
+      }
+  
+      lastUserChoice = userInput;
+      lastComputerChoice = computerChoice;
+  
+      alert(`Ваш выбор: ${userInput}\n` + `Выбор компьютера: ${computerChoice}\n` + `${result}`);
+    }
+  
+    alert(`Игра завершена!\n` + `Всего игр: ${wins + losses + draws}\n` + `Побед: ${wins}\n` + `Поражений: ${losses}\n` +`Ничьих: ${draws}\n`);
+
+}
+
 // game - 5
 
 function game5() {
@@ -135,7 +182,6 @@ function game5() {
     }
     alert(`Вы ответили правильно на ${length} вопросов`);
 }
-
 
 /* //task1
 let a = 10;
@@ -668,7 +714,7 @@ console.log(getAverageArr(averageArr)); */
 
 //task - 1
 
- let str = 'js';
+/*  let str = 'js';
  let STR = str.toUpperCase();
  console.log(STR);
 
@@ -770,4 +816,87 @@ function dateArr (inputDate) {
 
     console.log(`${fullDate}\n${fullTime}`);
 }
-dateArr("2025/06/24 14:30:45");
+dateArr("2025/06/24 14:30:45"); */
+
+//hw - 8
+
+//task - 1
+
+const people = [
+    { name: 'Глеб', age: 29 },
+    { name: 'Анна', age: 17 },
+    { name: 'Олег', age: 7 },
+    { name: 'Оксана', age: 47 }
+ ];
+ 
+ // Допишите колбэк для sort, изучите, как работает колбэк, в документации
+ console.log(people.sort((a, b) => a.age - b.age));
+
+
+ //task - 2
+
+function isPositive(num) {
+// писать код тут
+return num > 0;
+}
+function isMale(person) {
+// писать код тут
+return person.gender === 'male';
+}
+function filter(arr, ruleFunction) {
+// писать код тут
+const result = [];
+for (let i = 0; i < arr.length; i++) {
+    if(ruleFunction(arr[i])){
+        result.push(arr[i])
+    }  
+}
+return result;
+}
+
+console.log(filter([3, -4, 1, 9], isPositive));
+
+const People = [
+   {name: 'Глеб', gender: 'male'},
+   {name: 'Анна', gender: 'female'},
+   {name: 'Олег', gender: 'male'},
+   {name: 'Оксана', gender: 'female'}
+];
+
+console.log(filter(People, isMale));
+
+//task - 3
+
+ function timer() {
+    let date = new Date();
+    const interval = setInterval (() => {
+        console.log(date.toLocaleDateString());
+    }, 3000);
+    setTimeout(() =>{
+        clearInterval(interval);
+        console.log("30 секунд прошло");
+    }, 30000);
+ }
+
+ timer();
+
+ //task - 5 
+ // Функция delayForSecond через 1 секунду пишет в консоль 
+// «Прошла одна секунда», а затем вызывает переданный колбэк
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) {  cb(); }
+    }, 1000)
+}
+
+// Функция sayHi выводит в консоль приветствие для указанного имени
+function sayHi (name) {
+    console.log(`Привет, ${name}!`);
+}
+
+// Код выше менять нельзя
+
+// Нужно изменить код ниже:
+const myCallback = () => sayHi('Глеб');
+delayForSecond(myCallback);
