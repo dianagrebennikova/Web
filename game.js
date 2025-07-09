@@ -183,6 +183,26 @@ function game5() {
     alert(`Вы ответили правильно на ${length} вопросов`);
 }
 
+
+//game - 6
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+  }
+  
+  const btnGameSix = document.querySelector('.btnGameSix');
+  btnGameSix.addEventListener('click', () => {
+    document.body.style.backgroundColor = getRandomColor();
+  });
+  
+  const gameElement = document.querySelector('.game');
+  btnGameSix.addEventListener('click', () => {
+    gameElement.style.backgroundColor = getRandomColor();
+  });
+
 /* //task1
 let a = 10;
 alert (a);
@@ -822,7 +842,7 @@ dateArr("2025/06/24 14:30:45"); */
 
 //task - 1
 
-const people = [
+/* const people = [
     { name: 'Глеб', age: 29 },
     { name: 'Анна', age: 17 },
     { name: 'Олег', age: 7 },
@@ -900,3 +920,4 @@ function sayHi (name) {
 // Нужно изменить код ниже:
 const myCallback = () => sayHi('Глеб');
 delayForSecond(myCallback);
+ */
