@@ -57,3 +57,4 @@ descriptionEl.forEach(description => {
     const paragraph = document.querySelector('.newDescription');
         paragraph.remove();
  })
+
